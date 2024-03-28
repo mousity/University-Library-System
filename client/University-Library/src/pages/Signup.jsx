@@ -13,7 +13,7 @@ function SignupPage() {
 
   return (
     <div className='SignupBackground'>
-        <img src="../assets/Logo.png"/>
+        <img src="./assets/Logo.png" />
       <h2 className='Signup'>Signup</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>
