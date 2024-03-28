@@ -12,9 +12,9 @@
 
 .logo {
     margin: 0;
-    font-size: 4.5em;
+    font-size: 4em;
     color: rgb(58, 111, 162);
-    font-weight: 350;
+    font-weight: 500;
 }
 
 .topBar {
@@ -49,4 +49,5 @@
 
 .subOption {
     margin: .2em;
+    font-size: 1.4em;
 }

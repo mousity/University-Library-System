@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css';
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function NavBar(){
 return (
@@ -8,11 +8,11 @@ return (
     <div className="navBox">
         <div className="Navbar">
             <div className="topBar">
-                <h3 className="subTopOption">My account</h3>
+                <Link to="/Login"><h3 className="subTopOption">Login/Signup</h3></Link>
                 <h3 className="subTopOption">Hours</h3>
                 <h3 className="subTopOption">Contact us</h3>
             </div>
-            <h1 className="logo">UNIVERSITY OF GENERIC COUNTY</h1>
+            <h1 className="logo">COUNTY UNIVERSITY LIBRARY</h1>
             <div className="options">
                 <h2 className="subOption">About Us</h2>
                 <h2 className="subOption">Reserve a book</h2>
