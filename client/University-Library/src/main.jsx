@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar.jsx";
 import './index.css'
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
+import { AuthProvider } from "../../AuthContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider> {/* Wrap RouterProvider with AuthProvider */}
       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
