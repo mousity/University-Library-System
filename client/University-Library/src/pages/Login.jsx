@@ -32,7 +32,8 @@ function LoginPage() {
           />
         </div>
         <button className='loginButton' type="submit">Login</button>
-        <h3>Don't have an account with us? <Link to="/signup">Sign up here!</Link></h3>
+        <h3 className="signup-prompt">Don't have an account with us? <Link to="/signup">Sign up here!</Link></h3>
+        {/* <h3>Don't have an account with us? <Link to="/signup">Sign up here!</Link></h3> */}
       </form>
       
     </div>

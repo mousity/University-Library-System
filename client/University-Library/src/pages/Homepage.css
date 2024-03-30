@@ -3,3 +3,104 @@
     height: 25em;
     object-fit: cover;
 }
+body {
+    background-color: rgb(199, 196, 196);
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 10px;
+    margin-top: 10px; 
+}
+
+
+input[type="text"] {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    width: 40%; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #333;
+    font-family: 'Cinzel', serif;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+.footer {
+    background-color: #333;
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Cinzel', serif;
+    color: rgb(170, 160, 160);
+    justify-content: center;
+}
+.footer-content svg {
+    font-size: 16px; 
+    color: #cac7c7; 
+    
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; 
+    gap: 200px;
+    margin-top: 20px; 
+    cursor: pointer; 
+}
+.icon-with-label {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.icon-with-label span {
+    margin-top: 8px; 
+    font-size: 14px; 
+    font-family: 'Cinzel', serif;
+    color: #000000; 
+}
+ .icon-container svg {
+    font-size: 44px; 
+    cursor: pointer; 
+}
+
+.icon-container svg:hover {
+    color: #007bff; 
+} 
+
+.prompt {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin-top: 25px; 
+    font-size: 44px; 
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    color: #000000; 
+
+}
