@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar.jsx";
 import './index.css';
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
-
+import Books from "./pages/Books.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +25,9 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />
+  }, {
+    path: "/books",
+    element: <Books />
   }
 ]);
 
