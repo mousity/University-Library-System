@@ -13,18 +13,18 @@ function Homepage() {
   const supabase = createClient(supabaseUrl, supabaseKey)
   //SUPABASE CONNECTION DATA
 
-  const [countries, setCountries] = useState([]);
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    getCountries();
+    getBooks();
 
   }, []);
 
-  async function getCountries() {
+  async function getBooks() {
     const { data } = await supabase.from("books").select();
-    setCountries(data);
+    setBooks(data);
   }
-  console.log(countries)
+  console.log(books);
 
   return (
     <>
@@ -54,6 +54,13 @@ function Homepage() {
         </div>
       </div>
 
+      {/* Temporary! 
+      <ul>
+      {books.map((book) => (
+        <li key={book.id}>{book.title}</li>
+      ))}
+      </ul>
+      */}
       <footer className="footer">
         <div className="footer-content">
           <p><FontAwesomeIcon icon={faEnvelope} />Contact Us: Countylibrary@Gmail.com</p>
@@ -63,7 +70,6 @@ function Homepage() {
       </footer>
     </>
   );
+
 }
-
-
 export default Homepage;
