@@ -54,13 +54,13 @@ function Homepage() {
         </div>
       </div>
 
-      <!-- 
+      {/* Temporary! 
       <ul>
       {books.map((book) => (
         <li key={book.id}>{book.title}</li>
       ))}
       </ul>
-      -->
+      */}
       <footer className="footer">
         <div className="footer-content">
           <p><FontAwesomeIcon icon={faEnvelope} />Contact Us: Countylibrary@Gmail.com</p>
