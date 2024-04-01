@@ -1,6 +1,5 @@
 .LoginBackground {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -8,6 +7,7 @@
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  background-color: #5b89ba;
 }
 
 .Form {
@@ -17,11 +17,12 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .Login {
   text-align: center;
-  color: #333;
+  color: #f4efef;
 }
 
 .Form div {
@@ -39,7 +40,7 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding does not affect overall width */
+  box-sizing: border-box; 
 }
 
 .loginButton {
@@ -60,4 +61,9 @@
 .signup-prompt {
   text-align: center;
   margin-top: 15px;
+}
+
+.logo {
+  border-radius: .3em;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

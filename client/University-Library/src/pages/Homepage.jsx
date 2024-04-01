@@ -36,6 +36,7 @@ function Homepage() {
         />
         <button>Search</button>
       </div>
+      <div>
       <div className="prompt">
         <span>I Want To </span>
       </div>
@@ -52,6 +53,7 @@ function Homepage() {
           <FontAwesomeIcon icon={faBook} />
           <span>My Books</span>
         </div>
+      </div>
       </div>
 
       {/* Temporary! 

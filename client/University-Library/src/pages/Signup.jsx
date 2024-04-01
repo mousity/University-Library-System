@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./Signup.css";
 import { Outlet, Link } from "react-router-dom";
 import { createClient } from '@supabase/supabase-js';
+import logo from '../assets/Logo.png';
 
 function SignupPage() {
 
@@ -46,7 +47,7 @@ function SignupPage() {
 
   return (
     <div className='SignupBackground'>
-      <img src="..\assets\Logo.png" />
+      <Link to="/"> <img className='logo' src={logo}/> </Link>
       <h2 className='Signup'>Signup</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>

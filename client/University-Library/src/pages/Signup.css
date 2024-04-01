@@ -7,7 +7,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column; /* Assuming you want the form and other elements stacked */
+  flex-direction: column; 
+  background-color: #5b89ba;
 }
 
 .Form {
@@ -17,11 +18,13 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .Signup {
   text-align: center;
   color: #333;
+  color: #f4efef;
 }
 
 .Form div {
@@ -39,7 +42,7 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding does not affect overall width */
+  box-sizing: border-box; 
 }
 
 .loginButton {
@@ -55,4 +58,8 @@
 
 .loginButton:hover {
   background-color: #0056b3;
+}
+
+.logo {
+  border-radius: .3em;
 }

@@ -25,8 +25,6 @@ function Books() {
     }
 
 
-
-
     async function rentBooks(book_id) {
         const { data: loansData, error: loansError } = await supabase
             .from('loans')

@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../AuthContext';
+import logo from '../assets/Logo.png';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -53,6 +54,7 @@ function LoginPage() {
 
   return (
     <div className='LoginBackground'>
+      <Link to="/"> <img className='logo' src={logo}/> </Link>
       <h2 className='Login'>Login</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>
@@ -73,7 +75,6 @@ function LoginPage() {
         </div>
         <button className='loginButton' type="submit">Login</button>
         <h3 className="signup-prompt">Don't have an account with us? <Link to="/signup">Sign up here!</Link></h3>
-        {/* <h3>Don't have an account with us? <Link to="/signup">Sign up here!</Link></h3> */}
       </form>
 
     </div>
