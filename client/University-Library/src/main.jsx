@@ -8,7 +8,7 @@ import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
 import Books from "./pages/Books.jsx";
 import { AuthProvider } from "../../AuthContext.jsx";
-
+import Mybooks from "./pages/Mybooks.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +29,9 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />
+  },{
+    path: "/mybooks",
+    element: <Mybooks />
   }
 ]);
 

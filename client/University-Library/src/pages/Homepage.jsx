@@ -3,7 +3,7 @@ import './Homepage.css';
 import { createClient } from "@supabase/supabase-js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faHome, faBook, faSearch, faArrowAltCircleLeft, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from "react-router-dom";
 function Homepage() {
 
 
@@ -49,10 +49,12 @@ function Homepage() {
           <FontAwesomeIcon icon={faArrowAltCircleLeft} />
           <span>Return Book</span>
         </div>
-        <div className="icon-with-label">
-          <FontAwesomeIcon icon={faBook} />
-          <span>My Books</span>
-        </div>
+        <Link to="/Mybooks">
+          <div className="icon-with-label">
+            <FontAwesomeIcon icon={faBook} />
+            <span>My Books</span>
+          </div>
+        </Link>
       </div>
       </div>
 
