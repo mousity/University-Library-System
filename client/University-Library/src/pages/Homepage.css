@@ -4,7 +4,7 @@
     object-fit: cover;
 }
 body {
-    background-color: rgb(199, 196, 196);
+    background-color: rgb(240, 235, 235);
 }
 .search-container {
     display: flex;
@@ -44,7 +44,6 @@ button:hover {
     color: white; 
     text-align: center; 
     padding: 20px 0; 
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -69,6 +68,7 @@ button:hover {
     gap: 200px;
     margin-top: 20px; 
     cursor: pointer; 
+    padding: 2em;
 }
 .icon-with-label {
     display: flex;
@@ -102,5 +102,4 @@ button:hover {
     font-weight: bold;
     font-family: 'Cinzel', serif;
     color: #000000; 
-
 }
