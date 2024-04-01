@@ -1,7 +1,6 @@
 import react, { useEffect, useState } from "react";
 import './Homepage.css';
 import { createClient } from "@supabase/supabase-js";
-<<<<<<< HEAD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faHome, faBook, faSearch, faArrowAltCircleLeft, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
@@ -75,7 +74,6 @@ function Homepage() {
   //SUPABASE CONNECTION DATA
 
   const [books, setBooks] = useState([]);
->>>>>>> origin/Summerbranch
 
   useEffect(() => {
     getBooks();
