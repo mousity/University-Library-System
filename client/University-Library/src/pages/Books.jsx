@@ -98,7 +98,6 @@ function Books() {
 
     }
 
-    console.log(user.user.id)
 
 
 
@@ -109,7 +108,8 @@ function Books() {
             <ul>
                 {books.map((book) => (
                     <li key={book.id}>
-                        <strong>{book.title}</strong> by {book.author} (Genre: {book.genre}, Available: {book.available})
+                        <strong>{book.title}</strong> <img src={book.image} alt="Book Cover" /> by {book.author} (Genre: {book.genre}, Available: {book.available})
+
                         {/* Conditional rendering based on user's login state */}
                         {user ? (
                             <button onClick={() => rentBooks(book.id)}>Rent</button>
