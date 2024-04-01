@@ -7,6 +7,8 @@ import './index.css';
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
 import Books from "./pages/Books.jsx";
+import { AuthProvider } from "../../AuthContext.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +35,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} /> {/* Render the RouterProvider */}
-  </React.StrictMode>,
+    <AuthProvider> {/* Wrap RouterProvider with AuthProvider */}
+      <RouterProvider router={router} />
+    </AuthProvider>  </React.StrictMode>,
 );
