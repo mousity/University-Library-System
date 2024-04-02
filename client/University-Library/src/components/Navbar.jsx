@@ -38,7 +38,7 @@ function NavBar() {
               </div>
             </div>
           </div>
-          <h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1>
+          <Link className="logoLink" to="/"><h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1></Link>
           <div className="options">
             <h2 className="subOption">Events & Workshops</h2>
             <h2 className="subOption">Research Studies</h2>
