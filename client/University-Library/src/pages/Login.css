@@ -1,31 +1,30 @@
-.LoginBackground {
+.SignupBackground {
   font-family: Arial, sans-serif;
-  border: 20px solid #333; 
-  border-radius: 88px; 
-  margin: 10px;
-  padding: px;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: auto;
-  flex-direction: column;
-  background-color:  #ded0d0;
+  flex-direction: column; 
+  background-color: #5b89ba;
 }
 
 .Form {
-  background-color:  #b1adad;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 400px;
-  box-shadow: rgba(0, 0, 0, 0.19) 10px 30px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.Login {
+.Signup {
   text-align: center;
   color: #333;
+  color: #f4efef;
 }
 
 .Form div {
@@ -55,32 +54,12 @@
   color: white;
   cursor: pointer;
   font-size: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  cursor: pointer; 
 }
 
 .loginButton:hover {
   background-color: #0056b3;
-  transform: scale(1.05); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-.signup-prompt {
-  text-align: center;
-  margin-top: 15px;
 }
 
 .logo {
-  
   border-radius: .3em;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.logoMain {
-  font-family: 'Cinzel', serif;
-  font-size:100px;
-}
-.signup1{
-  color: #ffffff;
-
 }
