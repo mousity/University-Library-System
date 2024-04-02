@@ -100,26 +100,25 @@ function Books() {
 
 
 
-
     return (
-        <div>
+        <div className="book-list">
             <h1>Book List</h1>
-            <ul>
-                {books.map((book) => (
-                    <li key={book.id}>
-                        <strong>{book.title}</strong> <img src={book.image} alt="Book Cover" /> by {book.author} (Genre: {book.genre}, Available: {book.available})
-
-
-                        {/* Conditional rendering based on user's login state */}
-                        {user ? (
-                            <button onClick={() => rentBooks(book.id)}>Rent</button>
-                        ) : <h1></h1>}
-
-                    </li>
-                ))}
-            </ul>
+            {books.map((book) => (
+                <div className="book-item" key={book.id}>
+                    <img className="book-image" src={book.image} alt={book.title} />
+                    <div className="book-info">
+                        <strong>{book.title}</strong> by {book.author}
+                        <div>(Genre: {book.genre}, Available: {book.available})</div>
+                    </div>
+    
+                    {user && (
+                        <button className="rent-button" onClick={() => rentBooks(book.id)}>Rent</button>
+                    )}
+                </div>
+            ))}
         </div>
     );
+
 }
 
 

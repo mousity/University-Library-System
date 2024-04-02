@@ -1,14 +1,16 @@
 .SignupBackground {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+  border: 20px solid #333; 
+  border-radius: 88px; 
+  margin: 10px;
+  padding: px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column; 
-  background-color: #5b89ba;
+  width: auto;
+  flex-direction: column;
+  background-color:  #ded0d0;
 }
 
 .Form {
@@ -24,7 +26,6 @@
 .Signup {
   text-align: center;
   color: #333;
-  color: #f4efef;
 }
 
 .Form div {
@@ -62,4 +63,7 @@
 
 .logo {
   border-radius: .3em;
+}
+.loginHere1 {
+  color: #ffffff;
 }

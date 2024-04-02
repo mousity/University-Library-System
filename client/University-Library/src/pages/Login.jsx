@@ -53,8 +53,12 @@ function LoginPage() {
 
 
   return (
+      
     <div className='LoginBackground'>
-      <Link to="/"> <img className='logo' src={logo}/> </Link>
+      <h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1>
+      <img className="banner" src="https://149747948.v2.pressablecdn.com/wp-content/uploads/homepage-still3.jpg" />
+      
+      {/* <Link to="/"> <img className='logo' src={logo}/> </Link> */}
       <h2 className='Login'>Login</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>
@@ -74,7 +78,7 @@ function LoginPage() {
           />
         </div>
         <button className='loginButton' type="submit">Login</button>
-        <h3 className="signup-prompt">Don't have an account with us? <Link to="/signup">Sign up here!</Link></h3>
+        <h3 className="signup-prompt">Don't have an account with us? <Link className="signup1" to="/signup">Sign up here!</Link></h3>
       </form>
 
     </div>

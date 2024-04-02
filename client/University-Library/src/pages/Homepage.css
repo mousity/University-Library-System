@@ -13,8 +13,8 @@ body {
     flex-direction: column; 
     gap: 10px;
     margin-top: 10px; 
-}
 
+}
 
 input[type="text"] {
     background-color: #000000;
@@ -34,10 +34,14 @@ button {
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
 }
 
 button:hover {
     background-color: #007bff;
+    transform: scale(1.15); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 .footer {
     background-color: #333;

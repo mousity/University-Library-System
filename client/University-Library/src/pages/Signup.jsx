@@ -47,7 +47,9 @@ function SignupPage() {
 
   return (
     <div className='SignupBackground'>
-      <Link to="/"> <img className='logo' src={logo}/> </Link>
+      <h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1>
+      <img className="banner" src="https://149747948.v2.pressablecdn.com/wp-content/uploads/homepage-still3.jpg" />
+      {/* <Link to="/"> <img className='logo' src={logo}/> </Link> */}
       <h2 className='Signup'>Signup</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>
@@ -68,7 +70,7 @@ function SignupPage() {
         </div>
         {signUpMessage ? <h4>{signUpMessage}</h4> : null}
         <button className='loginButton' type="submit">Sign up</button>
-        <h3>Already have an account with us? <Link to="/login">Login here!</Link></h3>
+        <h3 className="loginHere">Already have an account with us? <Link className="loginHere1"to="/login">Login here!</Link></h3>
       </form>
 
     </div>

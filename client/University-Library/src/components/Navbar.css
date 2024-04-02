@@ -50,9 +50,25 @@
 .subOption {
     margin: .2em;
     font-size: 1.4em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
     
 }
-.topBar {
+
+.subOption:hover{
+    transform: scale(1.15); 
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.25);
+}
+.subTopOption {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+}
+
+.subTopOption:hover
+{
+    transform: scale(1.15); 
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.25);
+}.topBar {
     font-size: 15px;
 
 
