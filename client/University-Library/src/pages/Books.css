@@ -1,8 +1,4 @@
-img {
-    width: 100px;
-    height:140px;
-   
-}
+
 .book-list {
     display: flex;
     flex-direction: column;
