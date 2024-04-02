@@ -75,7 +75,6 @@ function Books() {
                     book_id: book_id,
                     checkout_date: checkoutDate, // Use formatted date
                     due_date: formattedDueDate, // Use formatted date
-                    status: "active"
                 }
             ])
 

@@ -5,7 +5,6 @@ import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../AuthContext';
 import logo from '../assets/Logo.png';
-
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -54,7 +53,7 @@ function LoginPage() {
 
   return (
     <div className='LoginBackground'>
-      <Link to="/"> <img className='logo' src={logo}/> </Link>
+      <Link to="/"> <img className='logo' src={logo} /> </Link>
       <h2 className='Login'>Login</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>
