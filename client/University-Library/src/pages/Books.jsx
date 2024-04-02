@@ -2,6 +2,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from "react";
 import { useAuth } from "../../../AuthContext";
+import "./Books.css";
 function Books() {
 
     //SUPABASE CONNECTION DATA
@@ -106,6 +107,7 @@ function Books() {
                 {books.map((book) => (
                     <li key={book.id}>
                         <strong>{book.title}</strong> <img src={book.image} alt="Book Cover" /> by {book.author} (Genre: {book.genre}, Available: {book.available})
+
 
                         {/* Conditional rendering based on user's login state */}
                         {user ? (
