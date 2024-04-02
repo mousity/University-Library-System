@@ -47,9 +47,7 @@ function SignupPage() {
 
   return (
     <div className='SignupBackground'>
-      <h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1>
-      <img className="banner" src="https://149747948.v2.pressablecdn.com/wp-content/uploads/homepage-still3.jpg" />
-      {/* <Link to="/"> <img className='logo' src={logo}/> </Link> */}
+      <Link to="/"> <img className='logo' src={logo}/> </Link> 
       <h2 className='Signup'>Signup</h2>
       <form className="Form" onSubmit={handleSubmit}>
         <div>
