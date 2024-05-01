@@ -101,7 +101,6 @@ function Books() {
 
     return (
         <div className="book-list">
-            <h1>Book List</h1>
             {books.map((book) => (
                 <div className="book-item" key={book.id}>
                     <img className="book-image" src={book.image} alt={book.title} />
