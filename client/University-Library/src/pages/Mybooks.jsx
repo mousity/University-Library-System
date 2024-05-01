@@ -51,13 +51,18 @@ function Mybooks() {
     return (<div>
         <h1>My Books:</h1>
         <ul>
-            {data ? data.map((book) => (
+            {user ? (Array.isArray(data) && data.length > 0 ? data.map((book) => (//BUG HERE, CANNOT MAP OVER EMPTY BOOKS
                 <li key={book.id}>
                     {book.title}
                     <button onClick={() => returnBook(book.id)}>return</button>
 
                 </li>
-            )) : <h1>Sign in to view books</h1>}
+            ))
+                :
+                <h1>You do not have any books</h1>
+            ) : <h1>Sign in to view books</h1>}
+
+
         </ul>
     </div>
     )
