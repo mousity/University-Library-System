@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Signup.css";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import { createClient } from '@supabase/supabase-js';
 import logo from '../assets/Logo.png';
 
@@ -16,6 +16,7 @@ function SignupPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [signUpMessage, setSignUpMessage] = useState('');
+  const navigate = useNavigate();
 
   async function signUp() {
     const { user, error } = await supabase.auth.signUp({
@@ -28,8 +29,7 @@ function SignupPage() {
       setSignUpMessage(error.message);
     } else {
       console.log('User signed up successfully.',);
-      setSignUpMessage("Success, please check ", user.user.email, " and verify your email");
-
+      setSignUpMessage("Success, please check your email for a verification message!");
       // Handle successful signup, e.g., redirect or show success message
     }
   }
@@ -42,6 +42,7 @@ function SignupPage() {
       return;
     }
     signUp();
+
   };
 
 

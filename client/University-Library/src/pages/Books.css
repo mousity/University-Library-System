@@ -3,7 +3,6 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates a responsive grid */
     gap: 20px; /* Space between grid items */
     align-items: start; /* Aligns items at the start of each grid cell */
-    border: 20px solid #333;
     background-color: #ded0d0;
     padding: 20px;
     margin: 20px;

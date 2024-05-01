@@ -2,9 +2,17 @@ import React from "react";
 import './Navbar.css';
 import { useAuth } from "../../../AuthContext";
 import { Outlet, Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();  
+    window.location.href = '/';
+  };
+
   return (
     <>
       <div className="navBox">
@@ -12,7 +20,10 @@ function NavBar() {
           <div className="topBar">
             {/* Conditional rendering based on user's login state */}
             {user ? (
-              <h3 className="subTopOption">Welcome, {user.user.email}</h3> // Assuming the user object has an email. Adjust as needed.
+              <div className="contain1">
+                <h3 className="subTopOption">Welcome, {user.user.email}</h3>
+                <Link to="/" className="subTopOption" onClick={handleLogout}>Logout</Link>
+              </div>
             ) : (
               <Link to="/Login"><h3 className="subTopOption">Login/Signup</h3></Link>
             )}
