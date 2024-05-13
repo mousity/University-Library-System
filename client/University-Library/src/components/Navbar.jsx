@@ -27,7 +27,7 @@ function NavBar() {
             ) : (
               <Link to="/Login"><h3 className="subTopOption">Login/Signup</h3></Link>
             )}
-            <Link to="/books"><h3 className="subTopOption">Books</h3></Link>
+            <Link to="/mybooks"><h3 className="subTopOption">My Books</h3></Link>
 
             <div className="dropdown">
 
@@ -51,10 +51,11 @@ function NavBar() {
           </div>
           <Link className="logoLink" to="/"><h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1></Link>
           <div className="options">
-            <h2 className="subOption">Events & Workshops</h2>
-            <h2 className="subOption">Research Studies</h2>
-            <h2 className="subOption">FAQ</h2>
-            <h2 className="subOption">About Us</h2>
+            <Link className="subOption">Events & Workshops</Link>
+            <Link className="subOption">Research Studies</Link>
+            <Link className="subOption">FAQ</Link>
+            <Link className="subOption">About Us</Link>
+            <Link to="/books" className="subOption">The Library</Link>
           </div>
         </div>
       </div>

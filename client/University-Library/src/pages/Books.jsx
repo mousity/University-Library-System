@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from "react";
 import { useAuth } from "../../../AuthContext";
 import "./Books.css";
+import Footer from "./Footer";
 function Books() {
 
     //SUPABASE CONNECTION DATA
@@ -100,6 +101,7 @@ function Books() {
 
 
     return (
+        <>
         <div className="book-list">
             {books.map((book) => (
                 <div className="book-item" key={book.id}>
@@ -115,6 +117,8 @@ function Books() {
                 </div>
             ))}
         </div>
+        <Footer></Footer>
+        </>
     );
 
 }
