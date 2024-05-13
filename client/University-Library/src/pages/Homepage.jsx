@@ -4,6 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faHome, faBook, faSearch, faArrowAltCircleLeft, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 function Homepage() {
 
 
@@ -65,13 +66,7 @@ function Homepage() {
       ))}
       </ul>
       */}
-      <footer className="footer">
-        <div className="footer-content">
-          <p><FontAwesomeIcon icon={faEnvelope} />Contact Us: Countylibrary@Gmail.com</p>
-          <p><FontAwesomeIcon icon={faPhone} />Phone: 718-564-9089</p>
-          <p>&copy; 2024 County University Library</p>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
   );
 

@@ -3,6 +3,7 @@ import "./Signup.css";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { createClient } from '@supabase/supabase-js';
 import logo from '../assets/Logo.png';
+import Footer from './Footer';
 
 function SignupPage() {
 
@@ -47,6 +48,7 @@ function SignupPage() {
 
 
   return (
+    <>
     <div className='SignupBackground'>
       <Link to="/"> <img className='logo' src={logo}/> </Link> 
       <h2 className='Signup'>Signup</h2>
@@ -72,7 +74,10 @@ function SignupPage() {
         <h3 className="loginHere">Already have an account with us? <Link className="loginHere1"to="/login">Login here!</Link></h3>
       </form>
 
+      
     </div>
+    <Footer></Footer>
+    </>
   );
 }
 
