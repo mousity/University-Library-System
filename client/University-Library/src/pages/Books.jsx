@@ -57,11 +57,6 @@ function Books() {
             return;
         }
 
-
-
-
-
-
         //SET CHECKOUT DATE
         const today = new Date();
         const checkoutDate = today.toISOString().split('T')[0]; // Format for 'date' type
@@ -80,8 +75,6 @@ function Books() {
                 }
             ])
 
-
-
         if (error) {
             console.log('Error loaning book:', error);
             // Optionally, handle the case where the decrement fails
@@ -94,11 +87,7 @@ function Books() {
             getBooks();
 
         }
-
     }
-
-
-
 
     return (
         <>
@@ -120,11 +109,6 @@ function Books() {
         <Footer></Footer>
         </>
     );
-
 }
-
-
-
-
 
 export default Books
