@@ -91,6 +91,13 @@ function Books() {
 
     return (
         <>
+        <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search for Library Resources..."
+        />
+        <button>Search</button>
+      </div>
         <div className="book-list">
             {books.map((book) => (
                 <div className="book-item" key={book.id}>
