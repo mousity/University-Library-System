@@ -7,6 +7,9 @@ import './index.css';
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
 import Books from "./pages/Books.jsx";
+import Events from "./pages/Events.jsx";
+import Faq from "./pages/Faq.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 import { AuthProvider } from "../../AuthContext.jsx";
 import Mybooks from "./pages/Mybooks.jsx";
 const router = createBrowserRouter([
@@ -23,9 +26,22 @@ const router = createBrowserRouter([
         element: <Books />
       },
       {
+        path: "/events",
+        element: <Events /> 
+      },
+      {
+        path: "/faq",
+        element: <Faq /> 
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs /> 
+      },
+      {
         path: "/mybooks",
         element: <Mybooks />
       }
+      
     ]
   },
   {

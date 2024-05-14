@@ -34,9 +34,9 @@ function NavBar() {
               <h3 className="subTopOption">Hours</h3>
               <div className="dropdown-content">
                 <p>Monday: 9AM - 10PM</p>
-                <p>Tuesday: 9AM - 12PM</p>
-                <p>Wednesday: 9AM - 2AM</p>
-                <p>Thursdy: 9AM - 8PM</p>
+                <p>Tuesday: 9AM - 10PM</p>
+                <p>Wednesday: 9AM - 10PM</p>
+                <p>Thursdy: 9AM - 10PM</p>
                 <p> Friday: 9AM - 10PM</p>
                 <p> Saturday/Sunday: Closed</p>
               </div>
@@ -51,10 +51,10 @@ function NavBar() {
           </div>
           <Link className="logoLink" to="/"><h1 className="logoMain">COUNTY UNIVERSITY LIBRARY</h1></Link>
           <div className="options">
-            <Link className="subOption">Events & Workshops</Link>
-            <Link className="subOption">Research Studies</Link>
-            <Link className="subOption">FAQ</Link>
-            <Link className="subOption">About Us</Link>
+            <Link to="/events" className="subOption">Events & Workshops</Link>
+            <a href="https://www.nypl.org/research/collections/articles-databases/academic-search-premier" className="subOption" target="_blank" rel="noopener noreferrer">Research Studies</a>
+            <Link to="/Faq" className="subOption">FAQ</Link>
+            <Link to="/AboutUs" className="subOption">About Us</Link>
             <Link to="/books" className="subOption">The Library</Link>
           </div>
         </div>
