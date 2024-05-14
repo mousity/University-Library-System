@@ -16,6 +16,7 @@ function Books() {
 
     const [books, setBooks] = useState([]);
     const [showForm, setShowForm] = useState(null); // Tracks which book's form to show
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         getBooks();
@@ -26,6 +27,27 @@ function Books() {
         setBooks(data);
     }
 
+    function handleSearchChange(event) {
+        setSearchTerm(event.target.value);
+    }
+
+    function handleSearch() {
+        getBooksFilteredBySearch();
+    }
+
+    async function getBooksFilteredBySearch() {
+        const { data, error } = await supabase
+            .from('books')
+            .select()
+            .ilike('title', `%${searchTerm}%`); // Using ilike for case-insensitive partial matching
+
+        if (error) {
+            console.log('Error fetching filtered books:', error);
+            return;
+        }
+
+        setBooks(data);
+    }
 
     async function rentBooks(book_id) {
         const { data: loansData, error: loansError } = await supabase
@@ -92,12 +114,14 @@ function Books() {
     return (
         <>
         <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search for Library Resources..."
-        />
-        <button>Search</button>
-      </div>
+                <input
+                    type="text"
+                    placeholder="Search for Library Resources..."
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                />
+                <button onClick={handleSearch}>Search</button>
+            </div>
         <div className="book-list">
             {books.map((book) => (
                 <div className="book-item" key={book.id}>
