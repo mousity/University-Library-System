@@ -41,11 +41,14 @@ function Homepage() {
       <div className="prompt">
         <span>I Want To </span>
       </div>
+      
       <div className="icon-container">
+      <Link to="/books">
         <div className="icon-with-label">
           <FontAwesomeIcon icon={faSearch} />
           <span>Search Book</span>
         </div>
+        </Link>
         <div className="icon-with-label">
           <FontAwesomeIcon icon={faArrowAltCircleLeft} />
           <span>Return Book</span>
