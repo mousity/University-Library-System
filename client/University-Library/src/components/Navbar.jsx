@@ -24,12 +24,13 @@ function NavBar() {
                 <h3 className="subTopOption">Welcome, {user.user.email}</h3>
                 <Link to="/settings" className="subTopOption">Settings</Link>
                 <Link to="/" className="subTopOption" onClick={handleLogout}>Logout</Link>
+                <Link to="/mybooks"><h3 className="subTopOption">My Books</h3></Link>
+            <Link to="/admin"><h3 className="subTopOption">ADMIN</h3></Link>
               </div>
             ) : (
               <Link to="/Login"><h3 className="subTopOption">Login/Signup</h3></Link>
             )}
-            <Link to="/mybooks"><h3 className="subTopOption">My Books</h3></Link>
-            <Link to="/admin"><h3 className="subTopOption">ADMIN</h3></Link>
+            
 
             <div className="dropdown">
 
