@@ -13,6 +13,7 @@ import Faq from "./pages/Faq.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import { AuthProvider } from "../../AuthContext.jsx";
 import Mybooks from "./pages/Mybooks.jsx";
+import Admin from "./pages/Admin.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,7 +47,11 @@ const router = createBrowserRouter([
         path: "/settings",
         element: <Settings/>
       }
-      
+      ,
+      {
+        path: "/admin",
+        element: <Admin />
+      }
     ]
   },
   {
