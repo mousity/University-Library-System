@@ -17,6 +17,7 @@ function NavBar() {
               <Link to="/Login"><h3 className="subTopOption">Login/Signup</h3></Link>
             )}
             <Link to="/books"><h3 className="subTopOption">Books</h3></Link>
+            <Link to="/admin"><h3 className="subTopOption">ADMIN</h3></Link>
 
             <div className="dropdown">
 

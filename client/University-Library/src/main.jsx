@@ -9,6 +9,7 @@ import LoginPage from "./pages/Login.jsx";
 import Books from "./pages/Books.jsx";
 import { AuthProvider } from "../../AuthContext.jsx";
 import Mybooks from "./pages/Mybooks.jsx";
+import Admin from "./pages/Admin.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/mybooks",
         element: <Mybooks />
+      }
+      ,
+      {
+        path: "/admin",
+        element: <Admin />
       }
     ]
   },
