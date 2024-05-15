@@ -13,7 +13,6 @@ function SignupPage() {
   const supabase = createClient(supabaseUrl, supabaseKey)
   //SUPABASE CONNECTION DATA
 
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [signUpMessage, setSignUpMessage] = useState('');
@@ -45,7 +44,6 @@ function SignupPage() {
     signUp();
 
   };
-
 
   return (
     <>

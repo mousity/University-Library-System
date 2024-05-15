@@ -7,6 +7,15 @@ body {
     background-color: rgb(240, 235, 235);
     background-color: #f4f4f9;
 }
+
+html, body {
+    height: 100%;  /* Ensure the full height is taken */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+}
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -60,6 +69,7 @@ button:hover {
     font-family: 'Cinzel', serif;
     color: rgb(170, 160, 160);
     justify-content: center;
+    flex: 1 0 auto;  /* Grow to absorb space */
 }
 .footer-content svg {
     font-size: 16px; 
@@ -107,4 +117,18 @@ button:hover {
     font-weight: bold;
     font-family: 'Cinzel', serif;
     color: #000000; 
+}
+
+footer {
+    flex-shrink: 0;  
+    width: 100%;
+    height: 12em; 
+    background-color: #333;  
+    color: white;  
+    text-align: center;
+    line-height: 50px;  
+}
+
+.my-books-container {
+    min-height: 60vh;
 }
