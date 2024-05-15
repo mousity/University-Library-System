@@ -1,0 +1,40 @@
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-us-container h1, .about-us-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-container p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .team-member {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .team-member p {
+    margin: 5px 0;
+    text-align: center;
+  }

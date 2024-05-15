@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js"
 import { useAuth } from "../../../AuthContext"
 import { useState, useEffect } from "react"
+import Footer from "./Footer"
 function Mybooks() {
     //SUPABASE CONNECTION DATA
     const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
@@ -10,8 +11,6 @@ function Mybooks() {
     const { user } = useAuth(); //check if user is logged in
 
     const [data, setData] = useState()//contains books that user has loaned out activerly
-
-
 
     useEffect(() => {
 
@@ -48,7 +47,8 @@ function Mybooks() {
 
     }
 
-    return (<div>
+    return (
+    <><div>
         <h1>My Books:</h1>
         <ul>
             {user ? (Array.isArray(data) && data.length > 0 ? data.map((book) => (//BUG HERE, CANNOT MAP OVER EMPTY BOOKS
@@ -62,9 +62,10 @@ function Mybooks() {
                 <h1>You do not have any books</h1>
             ) : <h1>Sign in to view books</h1>}
 
-
         </ul>
     </div>
+    <Footer></Footer>
+    </>
     )
 
 }

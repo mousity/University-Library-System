@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from "react";
 import { useAuth } from "../../../AuthContext";
 import "./Books.css";
+import Footer from "./Footer";
 function Books() {
 
     //SUPABASE CONNECTION DATA
@@ -15,6 +16,7 @@ function Books() {
 
     const [books, setBooks] = useState([]);
     const [showForm, setShowForm] = useState(null); // Tracks which book's form to show
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         getBooks();
@@ -25,6 +27,27 @@ function Books() {
         setBooks(data);
     }
 
+    function handleSearchChange(event) {
+        setSearchTerm(event.target.value);
+    }
+
+    function handleSearch() {
+        getBooksFilteredBySearch();
+    }
+
+    async function getBooksFilteredBySearch() {
+        const { data, error } = await supabase
+            .from('books')
+            .select()
+            .ilike('title', `%${searchTerm}%`); // Using ilike for case-insensitive partial matching
+
+        if (error) {
+            console.log('Error fetching filtered books:', error);
+            return;
+        }
+
+        setBooks(data);
+    }
 
     async function rentBooks(book_id) {
         const { data: loansData, error: loansError } = await supabase
@@ -56,11 +79,6 @@ function Books() {
             return;
         }
 
-
-
-
-
-
         //SET CHECKOUT DATE
         const today = new Date();
         const checkoutDate = today.toISOString().split('T')[0]; // Format for 'date' type
@@ -79,8 +97,6 @@ function Books() {
                 }
             ])
 
-
-
         if (error) {
             console.log('Error loaning book:', error);
             // Optionally, handle the case where the decrement fails
@@ -93,15 +109,20 @@ function Books() {
             getBooks();
 
         }
-
     }
 
-
-
-
     return (
+        <>
+        <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="Search for Library Resources..."
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                />
+                <button onClick={handleSearch}>Search</button>
+            </div>
         <div className="book-list">
-            <h1>Book List</h1>
             {books.map((book) => (
                 <div className="book-item" key={book.id}>
                     <img className="book-image" src={book.image} alt={book.title} />
@@ -116,12 +137,9 @@ function Books() {
                 </div>
             ))}
         </div>
+        <Footer></Footer>
+        </>
     );
-
 }
-
-
-
-
 
 export default Books
