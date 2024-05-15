@@ -7,6 +7,7 @@ import './index.css';
 import SignupPage from "./pages/Signup.jsx";
 import LoginPage from "./pages/Login.jsx";
 import Books from "./pages/Books.jsx";
+import Settings from "./pages/Settings.jsx";
 import { AuthProvider } from "../../AuthContext.jsx";
 import Mybooks from "./pages/Mybooks.jsx";
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/mybooks",
         element: <Mybooks />
+      },
+      {
+        path: "/settings",
+        element: <Settings/>
       }
     ]
   },

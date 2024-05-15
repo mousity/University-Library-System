@@ -78,6 +78,8 @@
 
 
 }
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -114,3 +116,11 @@
     a:hover { text-decoration: none;}
     a:focus { text-decoration: none;}
     a:hover, a:active { text-decoration: none;}
+
+    .contain1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+    }
+    

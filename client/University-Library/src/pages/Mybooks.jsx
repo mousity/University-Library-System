@@ -12,8 +12,6 @@ function Mybooks() {
 
     const [data, setData] = useState()//contains books that user has loaned out activerly
 
-
-
     useEffect(() => {
 
         getLoanData();
@@ -63,7 +61,6 @@ function Mybooks() {
                 :
                 <h1>You do not have any books</h1>
             ) : <h1>Sign in to view books</h1>}
-
 
         </ul>
     </div>

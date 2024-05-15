@@ -22,6 +22,7 @@ function NavBar() {
             {user ? (
               <div className="contain1">
                 <h3 className="subTopOption">Welcome, {user.user.email}</h3>
+                <Link to="/settings" className="subTopOption">Settings</Link>
                 <Link to="/" className="subTopOption" onClick={handleLogout}>Logout</Link>
               </div>
             ) : (
