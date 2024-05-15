@@ -29,7 +29,6 @@ function Settings() {
         }
     };
 
-    };
 
     return (
         <div className="settings-container">
