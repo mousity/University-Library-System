@@ -95,7 +95,6 @@ function Admin () {
     return (<>
         {user && user.user.is_anonymous == true ? (<>
             <div className="book-list">
-            <h1>Book List</h1>
             <button className="rent-button" onClick={() => addBook()}>Add book</button>
 
             {books.map((book) => (
